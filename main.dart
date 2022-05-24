@@ -17,7 +17,7 @@ void main() {
     print(listValues[0]);
 
     // Concatenação para printar os dois valores da lista:
-    print("${listValues[0]} - ${listValues[1]}");
+    print("${listValues[0]} ${listValues[1]}");
 
     // Variável com valor null:
       // Obs: Importante ter cuidado ao utilizar o ? para atribuir valores nulos, isso pode gerar erros.
