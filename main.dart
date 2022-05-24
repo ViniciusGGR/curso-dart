@@ -78,29 +78,45 @@ void main() {
       print("Loop -> ${counter}");  
     }
 
+    // A classe "Smartphone" é um tipo de objeto composto.
+    // () - Atributos da classe "Smartphone".
     Smartphone mySmartphone = Smartphone("Gray", 8, 5.7, 0.550);
     Smartphone otherSmartphone = Smartphone("Black", 6, 5.0, 0.475);
 
     print(mySmartphone.toString());
     print(otherSmartphone.toString());
+
+    double result = otherSmartphone.valueSmartphone(1000);
+    print(result);
 }
 
 // Criando uma classe:
 class Smartphone {
+  // Uma classe representa um objeto do mundo real.
+
   // Objetos do tipo final - O construtor passa a ter a Responsabilidade de definir os valores.
 
   // Atributos da Classe Smartphone:
   final String color;
   final int processor;
+
   // double - Tipo de variável para trabalhar com valores que tem casas decimais
   final double size;
   final double weight;
 
-  // Construtor - Parte da classe que sabe criar apartir dos atributos da classe.
+  // Construtor - Parte da classe que sabe criar a partir dos atributos da classe.
+
   // this - Palavra reservada que acessa os atributos da classe.
+  //Construtor:
   Smartphone(this.color, this.processor, this.size, this.weight);
 
+  // Método toString - Retorna os atributos/caracteristicas da classe.
   String toString() {
     return "Cor: $color, Processador: $processor, Tamanho: $size, Peso: $weight";
+  }
+
+  // Método para calcular o valor do Smartphone de acordo com o processador:
+  double valueSmartphone(double price) {
+    return price * processor;
   }
 }
