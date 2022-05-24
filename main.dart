@@ -77,4 +77,30 @@ void main() {
       counter = counter + 1;
       print("Loop -> ${counter}");  
     }
+
+    Smartphone mySmartphone = Smartphone("Gray", 8, 5.7, 0.550);
+    Smartphone otherSmartphone = Smartphone("Black", 6, 5.0, 0.475);
+
+    print(mySmartphone.toString());
+    print(otherSmartphone.toString());
+}
+
+// Criando uma classe:
+class Smartphone {
+  // Objetos do tipo final - O construtor passa a ter a Responsabilidade de definir os valores.
+
+  // Atributos da Classe Smartphone:
+  final String color;
+  final int processor;
+  // double - Tipo de variável para trabalhar com valores que tem casas decimais
+  final double size;
+  final double weight;
+
+  // Construtor - Parte da classe que sabe criar apartir dos atributos da classe.
+  // this - Palavra reservada que acessa os atributos da classe.
+  Smartphone(this.color, this.processor, this.size, this.weight);
+
+  String toString() {
+    return "Cor: $color, Processador: $processor, Tamanho: $size, Peso: $weight";
+  }
 }
