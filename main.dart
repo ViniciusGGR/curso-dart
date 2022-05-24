@@ -64,4 +64,16 @@ void main() {
       default:
         print("PADRÃO");
     }
+
+    // Estruturas de repetição:
+    for(int i = 1; i <= 10; i++) {
+      print("${i} x 2 = ${i * 2}");
+    }
+
+    int counter = 10;
+    
+    while(counter != 1) {
+      counter = counter - 1;
+      print("Loop ${counter}");  
+    }
 }
