@@ -88,6 +88,30 @@ void main() {
 
     double result = otherSmartphone.valueSmartphone(1000);
     print(result);
+
+    // Objetos "mercedes", "bmw":
+    Car mercedes = Car("Mercedes");
+    Car bmw = Car("BMW");
+
+    // Acessando o valor de um objeto
+    mercedes.model;
+}
+
+// Classe "Car":
+class Car {
+  final String model;
+
+  // Variável Privada:
+  String _secret = "Muito dinheiro";
+
+  int _valueCar = 1000;
+  // Variável pública com o get, mas não permite a atribuição de novos valores.
+  int get priceCar => _valueCar;
+
+  // Permite a alteração de valor.
+  void setValue(int valueCar) => _valueCar = valueCar;
+
+  Car(this.model);
 }
 
 // Criando uma classe:
