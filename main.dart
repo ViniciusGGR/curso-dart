@@ -70,10 +70,11 @@ void main() {
       print("${i} x 2 = ${i * 2}");
     }
 
+    // No while é importante ter uma condição de parada, isso garante que a aplicação não entre em um loop infinito.
     int counter = 10;
     
-    while(counter != 1) {
-      counter = counter - 1;
-      print("Loop ${counter}");  
+    while(counter != 30) {
+      counter = counter + 1;
+      print("Loop -> ${counter}");  
     }
 }
