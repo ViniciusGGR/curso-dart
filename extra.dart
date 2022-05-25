@@ -3,8 +3,6 @@ void main() async {
   String name = "Vinícius";
   Future<String> cepFuture = getCepByName("Lago sul");
   late String cep;
-
-  // cepFuture.then((result) => cep = result);
   
   cep = await cepFuture;
 
@@ -13,5 +11,6 @@ void main() async {
 
 // External service
 Future<String> getCepByName(String validateCep) {
+  // Simulando requisição
   return Future.value("00000-000");
 }
