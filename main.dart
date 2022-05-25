@@ -95,6 +95,68 @@ void main() {
 
     // Acessando o valor de um objeto
     mercedes.model;
+    print(mercedes.model);
+
+    // A class Son está herdando a caracteristica speak da classe Father:
+    Son paul = Son();
+    paul.speak();
+
+    Payment paying = PayDebitCard();
+    paying.pay();
+
+    paying = PayCreditCard();
+    paying.pay();
+}
+
+// Polimorfismo:
+abstract class Payment {
+  // Ação de pagar.
+  void pay();
+}
+
+// Primeira forma de pagamento:
+class PayCreditCard implements Payment {
+  void pay() {
+    print("Pagando com cartão de crédito.");
+  }
+}
+
+// Segunda forma de pagamento:
+class PayDebitCard implements Payment {
+  void pay() {
+    print("Pagando com cartão de débito.");
+  }
+}
+
+// Herança:
+class Father {
+  String speak() {
+    return "Olá pessoal";
+  }
+}
+
+// Herda caracteristicas da Classe Father:
+class Son extends Father {
+
+}
+
+// Interface/abstract class:
+abstract class Person {
+  // Não é feito a implementação desse atributo.
+  String toCommunicate();
+}
+
+class FirstPerson implements Person {
+  // Tem que ser implementado o atributo definido na abstract class acima.
+  String toCommunicate() {
+    return "Olá, Mundo";
+  }
+}
+
+class SecondPerson implements Person {
+  String toCommunicate() {
+    return "Bom dia!";
+  }
 }
 
 // Classe "Car":
